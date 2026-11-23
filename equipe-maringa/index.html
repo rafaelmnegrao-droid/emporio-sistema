@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Equipe da Loja Av. Maringá · Empório dos Animais</title>
+<meta name="theme-color" content="#F4F1EA" />
+<meta name="robots" content="noindex" />
+<meta name="description" content="Lista da equipe da loja Av. Maringá para montar o organograma." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Empório dos Animais" />
+<meta property="og:title" content="Equipe da loja Av. Maringá · Empório dos Animais" />
+<meta property="og:description" content="Uma linha por pessoa: cargo, horário e salário. Base para o organograma da loja." />
+<meta property="og:image" content="https://rafaelmnegrao-droid.github.io/emporio-sistema/og.jpg?v=2" />
+<meta property="og:url" content="https://rafaelmnegrao-droid.github.io/emporio-sistema/equipe-maringa/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="emblema.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#F4F1EA; --paper:#FFFFFF; --green:#1F3A2E; --green-soft:#2E4D3E;
+  --gold:#B8935A; --graphite:#2B2B2B; --ink-soft:#5E5E58; --sage:#A8B5A0;
+  --blue:#1B9DCD; --blue-deep:#137BA3; --blue-soft:#E4F3FA;
+  --line:#E4DBCD; --line-soft:#EEE8DC; --warn:#9A5B12; --warn-soft:#FBF1E2;
+  --radius:16px; --radius-sm:11px;
+  --shadow:0 1px 2px rgba(31,58,46,.05),0 12px 30px -18px rgba(31,58,46,.25);
+  --maxw:760px;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--graphite);background:var(--cream);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:24px 16px 150px}
+h1,h2{font-family:var(--serif);color:var(--green);margin:0}
+.head{text-align:center;padding:8px 0 4px}
+.head img{width:92px;height:92px;border-radius:50%;display:block;margin:0 auto 12px}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-deep);margin:0 0 8px}
+.head h1{font-size:clamp(26px,7.4vw,36px);line-height:1.08}
+.head .sub{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:17px;margin:6px 0 0}
+.divider{width:56px;height:2px;background:var(--gold);border:0;margin:18px auto}
+.lead{font-size:16px;max-width:560px;margin:0 auto 6px;text-align:center}
+.muted{color:var(--ink-soft)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.privacy{display:flex;gap:12px;align-items:flex-start;background:var(--blue-soft);border:1px solid #CBE7F3;border-radius:var(--radius-sm);padding:12px 14px;margin:20px 0 14px;font-size:14px}
+.privacy svg{flex:none;margin-top:2px}
+.paths{display:grid;grid-template-columns:1fr;gap:12px;margin:0 0 22px}
+@media(min-width:620px){.paths{grid-template-columns:1fr 1fr}}
+.path h2{font-size:18px;margin-bottom:4px}
+.path p{margin:0 0 12px;font-size:14.5px}
+.path .row{display:flex;flex-wrap:wrap;gap:8px}
+.btn{appearance:none;border:1.5px solid var(--green);background:var(--green);color:#fff;font:600 15px var(--sans);padding:12px 16px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;min-height:46px;line-height:1.2}
+.btn:hover{background:var(--green-soft)}
+.btn.ghost{background:transparent;color:var(--green);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--green);background:#fff}
+.btn.blue{background:var(--blue);border-color:var(--blue)}
+.btn.blue:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+.btn.wa{background:#1F8F4E;border-color:#1F8F4E}
+.btn.wa:hover{background:#18763F}
+.btn.small{font-size:13.5px;padding:8px 12px;min-height:38px}
+.btn.link{border:0;background:none;color:var(--ink-soft);padding:8px 6px;min-height:38px;font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.btn.link.danger{color:#A2402E}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:8px 0 12px}
+.section-title h2{font-size:22px}
+.count{font-size:13px;font-weight:600;color:var(--blue-deep);white-space:nowrap}
+.person{margin:0 0 12px;padding:0;overflow:hidden}
+.person-head{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none;background:none;border:0;width:100%;text-align:left;font:inherit;color:inherit}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--blue-soft);color:var(--blue-deep);font-weight:700;font-size:14px;display:grid;place-items:center}
+.who{flex:1;min-width:0}
+.who b{display:block;font-size:16px;color:var(--green);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who span{display:block;font-size:13px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{flex:none;font-size:11.5px;font-weight:600;border-radius:999px;padding:3px 9px}
+.tag.ok{background:#E6F0E8;color:#2C6440}
+.tag.miss{background:var(--warn-soft);color:var(--warn)}
+.chev{flex:none;transition:transform .2s}
+.person.open .chev{transform:rotate(180deg)}
+.person-body{display:none;padding:4px 16px 16px;border-top:1px solid var(--line-soft)}
+.person.open .person-body{display:block}
+.group{margin:16px 0 4px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.group small{font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink-soft);font-size:12.5px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}.full{grid-column:1/-1}}
+.trio{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.trio > label:last-child{grid-column:1/-1}
+@media(min-width:560px){.trio{grid-template-columns:1fr 1fr 1fr}.trio > label:last-child{grid-column:auto}}
+.grid > *,.trio > *{min-width:0}
+input[type=time]{-webkit-appearance:none;appearance:none;display:block}
+label.f{display:block}
+label.f > span{display:block;font-size:13.5px;font-weight:600;color:var(--green);margin:0 0 5px}
+label.f > span i{font-style:normal;font-weight:400;color:var(--ink-soft)}
+input,select,textarea{width:100%;min-width:0;max-width:100%;font:16px var(--sans);color:var(--graphite);background:#FDFCF9;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;min-height:46px}
+textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);background:#fff;outline:none;box-shadow:0 0 0 3px rgba(27,157,205,.18)}
+.mini{font-size:12px;color:var(--ink-soft);display:block;margin-top:4px}
+.trio label span{font-size:12px!important;font-weight:500!important;color:var(--ink-soft)!important}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;cursor:pointer;background:#FDFCF9;min-height:38px}
+.chip input:checked + span{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.chip input:focus-visible + span{outline:3px solid var(--blue);outline-offset:2px}
+.person-actions{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--line-soft)}
+.confirm{display:none;align-items:center;gap:8px;font-size:14px;flex-wrap:wrap}
+.confirm.show{display:flex}
+.add-row{display:flex;justify-content:center;margin:6px 0 26px}
+.send{margin-top:8px}
+.send h2{font-size:22px;margin-bottom:6px}
+.send .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.alert{background:var(--warn-soft);border:1px solid #EBD3AE;color:#6B420C;border-radius:var(--radius-sm);padding:10px 12px;font-size:14px;margin:12px 0 0;display:none}
+.alert.show{display:block}
+.note{font-size:13px;color:var(--ink-soft);margin:10px 0 0}
+.toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:var(--green);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(244,241,234,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.dock .in{max-width:var(--maxw);margin:0 auto;display:flex;gap:8px;align-items:center;justify-content:space-between}
+.dock .saved{font-size:12.5px;color:var(--ink-soft)}
+.foot{margin-top:40px;text-align:center;font-size:13px;color:var(--ink-soft)}
+.foot-by{display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.foot-by img{width:22px;height:22px;border-radius:5px}
+.verse{margin:12px auto 0;max-width:460px;font-size:11.5px;color:#9A978E;font-style:italic}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="head">
+    <img src="emblema.png" alt="Empório dos Animais" width="92" height="92" />
+    <p class="kicker">Loja Av. Maringá</p>
+    <h1>Quem é quem na equipe</h1>
+    <p class="sub">base para o organograma da loja</p>
+    <hr class="divider" />
+    <p class="lead">Uma ficha por pessoa: cargo, horário e salário. Com isso montamos o organograma e o papel do Líder de Loja na reunião desta semana.</p>
+    <p class="lead muted" style="font-size:14px">Leva uns 10 a 15 minutos. Pode parar e voltar depois: o que você digitar fica guardado neste aparelho.</p>
+  </header>
+
+  <div class="privacy" role="note">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#137BA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    <div><b>Salário é informação reservada.</b> Nada desta página vai para a internet. Os dados ficam só no seu aparelho até você mesmo enviar, e são usados apenas para o organograma e o plano de cargos da loja.</div>
+  </div>
+
+  <div class="paths">
+    <div class="card path">
+      <h2>Preencher aqui</h2>
+      <p class="muted">Mais prático no celular. Preencha as fichas abaixo e, no final, envie pelo WhatsApp.</p>
+      <div class="row"><a class="btn" href="#equipe">Começar</a></div>
+    </div>
+    <div class="card path">
+      <h2>Prefere planilha?</h2>
+      <p class="muted">Baixe o modelo, preencha no computador e mande o arquivo pelo WhatsApp. Se quiser, abra aqui para conferir antes.</p>
+      <div class="row">
+        <a class="btn ghost small" href="modelo-equipe-maringa.xlsx" download>Baixar modelo</a>
+        <button class="btn ghost small" type="button" id="btnOpenSheet">Abrir planilha preenchida</button>
+        <input type="file" id="fileSheet" class="hidden" accept=".xlsx,.csv" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title" id="equipe">
+    <h2>Equipe</h2>
+    <span class="count" id="count">0 pessoas</span>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="add-row">
+    <button class="btn blue" type="button" id="btnAdd">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      Adicionar pessoa
+    </button>
+  </div>
+
+  <section class="card send" id="enviar">
+    <h2>Enviar</h2>
+    <p class="muted" style="margin:0">Quando terminar, mande para o Rafael. Escolha o jeito mais fácil para você.</p>
+    <div class="alert" id="missing"></div>
+    <div class="row">
+      <button class="btn wa" type="button" id="btnWa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <button class="btn ghost" type="button" id="btnXlsx">Baixar planilha</button>
+      <button class="btn ghost" type="button" id="btnCopy">Copiar texto</button>
+    </div>
+    <p class="note">“Enviar pelo WhatsApp” abre o WhatsApp com o texto pronto: é só escolher o Rafael. Com muita gente, se o texto não couber, use “Baixar planilha” e anexe o arquivo na conversa.</p>
+    <div class="row" style="margin-top:6px"><button class="btn link danger" type="button" id="btnClear">Apagar tudo deste aparelho</button></div>
+    <div class="confirm" id="clearConfirm">Apagar todas as fichas deste aparelho? <button class="btn small" type="button" id="clearYes">Sim, apagar</button><button class="btn ghost small" type="button" id="clearNo">Cancelar</button></div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-by"><img src="rn.jpg" alt="" />preparado por RN Negócios · Diagnóstico</div>
+    <p class="verse">“Qual de vós, querendo edificar uma torre, não se assenta primeiro a fazer as contas?” Lucas 14:28 · Deus é fiel</p>
+  </footer>
+</main>
+
+<div class="dock">
+  <div class="in">
+    <span class="saved" id="saved">Guardado neste aparelho</span>
+    <a class="btn small" href="#enviar">Ir para enviar</a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = "emporio-equipe-maringa-v1";
+  var DAYS = ["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"];
+  var CONTRATOS = ["CLT","Estágio","Temporário","Jovem aprendiz","MEI / prestador","Outro"];
+  var ABRE = ["Abre","Fecha","Abre e fecha","Não"];
+
+  // Field definitions: key, label, used in text/planilha
+  var COLS = [
+    ["nome","Nome"],["cargo","Cargo / função"],["entrada","Entrada"],["saida","Saída"],
+    ["intervalo","Intervalo (almoço)"],["sabado","Sábado (horário)"],["carga","Carga horária semanal (h)"],
+    ["salario","Salário (R$)"],["chefe","Chefe direto"],["folga","Dia de folga"],
+    ["contrato","Tipo de contrato"],["admissao","Data de admissão"],["variavel","Comissão ou variável"],
+    ["abre","Abre ou fecha a loja"],["obs","Observação"]
+  ];
+  var REQUIRED = ["nome","cargo","entrada","saida","carga","salario"];
+
+  var state = load();
+  if (!state.people.length) state.people.push(blank());
+  var openId = state.people[0].id;
+
+  function uid(){ return Math.random().toString(36).slice(2,9); }
+  function blank(){ return {id:uid(),nome:"",cargo:"",entrada:"",saida:"",intervalo:"",sabado:"",carga:"",salario:"",chefe:"",folga:[],contrato:"",admissao:"",variavel:"",variavelQual:"",abre:"",obs:""}; }
+  function load(){
+    try { var s = JSON.parse(localStorage.getItem(KEY)); if (s && Array.isArray(s.people)) return s; } catch(e){}
+    return {people:[]};
+  }
+  var saveTimer;
+  function save(){
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function(){
+      try { localStorage.setItem(KEY, JSON.stringify(state)); $("saved").textContent = "Guardado neste aparelho às " + new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"}); }
+      catch(e){ $("saved").textContent = "Não deu para guardar neste aparelho: envie antes de fechar"; }
+    }, 250);
+  }
+  function flush(){ clearTimeout(saveTimer); try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+  window.addEventListener("pagehide", flush);
+  document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") flush(); });
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+  function toast(msg){ var t=$("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(function(){t.classList.remove("show");},2600); }
+
+  function missingOf(p){ return REQUIRED.filter(function(k){ return !String(p[k]||"").trim(); }); }
+  function labelOf(k){ for (var i=0;i<COLS.length;i++) if (COLS[i][0]===k) return COLS[i][1]; return k; }
+
+  function chefeOptions(self){
+    var names = state.people.filter(function(p){return p.id!==self.id && p.nome.trim();}).map(function(p){return p.nome.trim();});
+    return ["Bruno (dono)","Líder de Loja (a contratar)"].concat(names);
+  }
+
+  function summary(p){
+    var bits = [];
+    if (p.cargo) bits.push(p.cargo);
+    if (p.entrada && p.saida) bits.push(p.entrada + " às " + p.saida);
+    return bits.join(" · ") || "Toque para preencher";
+  }
+
+  function render(){
+    var list = $("list"); list.innerHTML = "";
+    state.people.forEach(function(p, i){ list.appendChild(card(p, i)); });
+    var n = state.people.filter(function(p){return p.nome.trim();}).length;
+    $("count").textContent = n === 1 ? "1 pessoa" : n + " pessoas";
+  }
+
+  function card(p, i){
+    var el = document.createElement("article");
+    el.className = "card person" + (p.id===openId ? " open" : "");
+    el.dataset.id = p.id;
+    var miss = missingOf(p);
+    var started = p.nome || p.cargo;
+    var tag = !started ? "" : (miss.length ? '<span class="tag miss">falta '+miss.length+'</span>' : '<span class="tag ok">completa</span>');
+    var dl = "dl-"+p.id;
+    el.innerHTML =
+      '<button type="button" class="person-head" aria-expanded="'+(p.id===openId)+'">' +
+        '<span class="num">'+(i+1)+'</span>' +
+        '<span class="who"><b>'+esc(p.nome || ("Pessoa " + (i+1)))+'</b><span>'+esc(summary(p))+'</span></span>' + tag +
+        '<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E5E58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>' +
+      '</button>' +
+      '<div class="person-body">' +
+        '<p class="group">O essencial</p>' +
+        '<div class="grid">' +
+          f("nome","Nome", '<input type="text" data-k="nome" autocomplete="off" placeholder="Nome completo ou como é chamado" value="'+esc(p.nome)+'">', "full") +
+          f("cargo","Cargo / função", '<input type="text" data-k="cargo" list="dl-cargos" placeholder="Ex.: vendedor, caixa, banho e tosa" value="'+esc(p.cargo)+'">') +
+          f("carga","Carga horária semanal <i>(horas)</i>", '<input type="text" inputmode="decimal" data-k="carga" placeholder="Ex.: 44" value="'+esc(p.carga)+'">') +
+          '<div class="full"><label class="f"><span>Horário de segunda a sexta</span></label><div class="trio">' +
+            '<label class="f"><span>Entrada</span><input type="time" data-k="entrada" value="'+esc(p.entrada)+'"></label>' +
+            '<label class="f"><span>Saída</span><input type="time" data-k="saida" value="'+esc(p.saida)+'"></label>' +
+            '<label class="f"><span>Intervalo</span><input type="text" data-k="intervalo" placeholder="Ex.: 1h" value="'+esc(p.intervalo)+'"></label>' +
+          '</div></div>' +
+          f("sabado","Horário no sábado", '<input type="text" data-k="sabado" placeholder="Ex.: 8h30 às 16h, ou não trabalha" value="'+esc(p.sabado)+'">') +
+          f("salario","Salário <i>(R$ por mês, sem comissão)</i>", '<input type="text" inputmode="decimal" data-k="salario" placeholder="Ex.: 2.100,00" value="'+esc(p.salario)+'">') +
+        '</div>' +
+        '<p class="group">Se souber, ajuda muito <small>(para o organograma e o plano do líder)</small></p>' +
+        '<div class="grid">' +
+          f("chefe","A quem responde hoje", '<input type="text" data-k="chefe" list="'+dl+'" placeholder="Quem orienta e cobra esta pessoa" value="'+esc(p.chefe)+'"><datalist id="'+dl+'">'+chefeOptions(p).map(function(o){return '<option value="'+esc(o)+'">';}).join("")+'</datalist>') +
+          f("admissao","Desde quando trabalha na loja", '<input type="text" data-k="admissao" placeholder="Ex.: 03/2021" value="'+esc(p.admissao)+'">') +
+          '<div class="full"><label class="f"><span>Dia de folga</span></label><div class="chips">' +
+            DAYS.map(function(d){ return '<label class="chip"><input type="checkbox" data-k="folga" value="'+d+'"'+(p.folga.indexOf(d)>-1?" checked":"")+'><span>'+d+'</span></label>'; }).join("") +
+          '</div><span class="mini">Se a folga muda toda semana, escreva em “Observação”.</span></div>' +
+          '<div class="full"><label class="f"><span>Tipo de contrato</span></label><div class="chips">' +
+            CONTRATOS.map(function(c){ return '<label class="chip"><input type="radio" name="ct-'+p.id+'" data-k="contrato" value="'+c+'"'+(p.contrato===c?" checked":"")+'><span>'+c+'</span></label>'; }).join("") +
+          '</div></div>' +
+          '<div class="full"><label class="f"><span>Ganha comissão ou variável?</span></label><div class="chips">' +
+            ["Sim","Não"].map(function(c){ return '<label class="chip"><input type="radio" name="va-'+p.id+'" data-k="variavel" value="'+c+'"'+(p.variavel===c?" checked":"")+'><span>'+c+'</span></label>'; }).join("") +
+          '</div>' +
+          '<input type="text" data-k="variavelQual" class="'+(p.variavel==="Sim"?"":"hidden")+'" style="margin-top:8px" placeholder="Como funciona? Ex.: 1% das vendas, prêmio por meta" value="'+esc(p.variavelQual)+'"></div>' +
+          '<div class="full"><label class="f"><span>Abre ou fecha a loja?</span></label><div class="chips">' +
+            ABRE.map(function(c){ return '<label class="chip"><input type="radio" name="ab-'+p.id+'" data-k="abre" value="'+c+'"'+(p.abre===c?" checked":"")+'><span>'+c+'</span></label>'; }).join("") +
+          '</div><span class="mini">Quem tem a chave e cuida de abrir ou fechar o caixa.</span></div>' +
+          f("obs","Observação", '<textarea data-k="obs" placeholder="Qualquer coisa importante: acumula função, está de férias, vai sair...">'+esc(p.obs)+'</textarea>', "full") +
+        '</div>' +
+        '<div class="person-actions">' +
+          '<div><button type="button" class="btn ghost small" data-act="dup">Próxima pessoa com o mesmo horário</button></div>' +
+          '<div><button type="button" class="btn link danger" data-act="del">Remover</button>' +
+          '<span class="confirm"><span>Remover esta ficha?</span><button type="button" class="btn small" data-act="delYes">Sim, remover</button><button type="button" class="btn ghost small" data-act="delNo">Cancelar</button></span></div>' +
+        '</div>' +
+      '</div>';
+    return el;
+  }
+  function f(k, label, control, cls){ return '<label class="f '+(cls||"")+'"><span>'+label+'</span>'+control+'</label>'; }
+
+  function find(id){ for (var i=0;i<state.people.length;i++) if (state.people[i].id===id) return state.people[i]; }
+
+  function refreshHead(el, p){
+    var i = state.people.indexOf(p);
+    el.querySelector(".who b").textContent = p.nome || ("Pessoa " + (i+1));
+    el.querySelector(".who span").textContent = summary(p);
+    var old = el.querySelector(".person-head .tag"); if (old) old.remove();
+    var miss = missingOf(p);
+    if (p.nome || p.cargo){
+      var t = document.createElement("span");
+      t.className = "tag " + (miss.length ? "miss" : "ok");
+      t.textContent = miss.length ? "falta " + miss.length : "completa";
+      el.querySelector(".chev").before(t);
+    }
+    var n = state.people.filter(function(x){return x.nome.trim();}).length;
+    $("count").textContent = n === 1 ? "1 pessoa" : n + " pessoas";
+  }
+
+  var list = $("list");
+  list.addEventListener("input", onField);
+  list.addEventListener("change", onField);
+  function onField(e){
+    var t = e.target, k = t.dataset && t.dataset.k; if (!k) return;
+    var el = t.closest(".person"), p = find(el.dataset.id);
+    if (k === "folga"){
+      p.folga = Array.prototype.map.call(el.querySelectorAll('input[data-k="folga"]:checked'), function(x){return x.value;});
+    } else if (t.type === "radio"){
+      if (t.checked) p[k] = t.value;
+      if (k === "variavel"){ var q = el.querySelector('[data-k="variavelQual"]'); q.classList.toggle("hidden", t.value !== "Sim"); }
+    } else {
+      p[k] = t.value;
+    }
+    refreshHead(el, p);
+    save();
+  }
+
+  list.addEventListener("click", function(e){
+    var head = e.target.closest(".person-head");
+    var el = e.target.closest(".person"); if (!el) return;
+    if (head){
+      var opening = !el.classList.contains("open");
+      Array.prototype.forEach.call(list.querySelectorAll(".person.open"), function(x){ x.classList.remove("open"); x.querySelector(".person-head").setAttribute("aria-expanded","false"); });
+      if (opening){ el.classList.add("open"); head.setAttribute("aria-expanded","true"); openId = el.dataset.id; refreshChefes(el); } else openId = null;
+      return;
+    }
+    var act = e.target.dataset && e.target.dataset.act; if (!act) return;
+    var p = find(el.dataset.id), idx = state.people.indexOf(p);
+    if (act === "dup"){
+      var n = blank();
+      ["cargo","entrada","saida","intervalo","sabado","carga","chefe","contrato","abre"].forEach(function(k){ n[k] = p[k]; });
+      state.people.splice(idx+1, 0, n); openId = n.id; save(); render(); focusName(n.id);
+    } else if (act === "del"){
+      e.target.classList.add("hidden"); el.querySelector(".confirm").classList.add("show");
+    } else if (act === "delNo"){
+      el.querySelector(".confirm").classList.remove("show"); el.querySelector('[data-act="del"]').classList.remove("hidden");
+    } else if (act === "delYes"){
+      state.people.splice(idx, 1);
+      if (!state.people.length) state.people.push(blank());
+      openId = null; save(); render(); toast("Ficha removida");
+    }
+  });
+
+  function refreshChefes(el){
+    var p = find(el.dataset.id), d = el.querySelector("datalist");
+    if (d) d.innerHTML = chefeOptions(p).map(function(o){return '<option value="'+esc(o)+'">';}).join("");
+  }
+  function focusName(id){
+    var el = list.querySelector('[data-id="'+id+'"]'); if (!el) return;
+    el.scrollIntoView({behavior:"smooth", block:"start"});
+    setTimeout(function(){ var i = el.querySelector('[data-k="nome"]'); if (i) i.focus({preventScroll:true}); }, 350);
+  }
+
+  $("btnAdd").addEventListener("click", function(){
+    var n = blank(); state.people.push(n); openId = n.id; save(); render(); focusName(n.id);
+  });
+
+  // ---------- Saída ----------
+  function filled(){ return state.people.filter(function(p){ return p.nome.trim() || p.cargo.trim(); }); }
+  function row(p){
+    return {
+      nome:p.nome.trim(), cargo:p.cargo.trim(), entrada:p.entrada, saida:p.saida, intervalo:p.intervalo.trim(),
+      sabado:p.sabado.trim(), carga:p.carga.trim(), salario:p.salario.trim(), chefe:p.chefe.trim(),
+      folga:p.folga.join(", "), contrato:p.contrato, admissao:p.admissao.trim(),
+      variavel: p.variavel === "Sim" ? ("Sim" + (p.variavelQual.trim() ? ": " + p.variavelQual.trim() : "")) : p.variavel,
+      abre:p.abre, obs:p.obs.trim()
+    };
+  }
+  function checkMissing(){
+    var ps = filled(), box = $("missing");
+    if (!ps.length){ box.innerHTML = "Ainda não há ninguém preenchido."; box.classList.add("show"); return false; }
+    var lines = [];
+    ps.forEach(function(p){ var m = missingOf(p); if (m.length) lines.push("<b>"+esc(p.nome||"Sem nome")+"</b>: falta "+m.map(labelOf).join(", ").toLowerCase()); });
+    if (lines.length){ box.innerHTML = "Pode enviar assim mesmo. Só para saber, ficou faltando:<br>" + lines.join("<br>"); box.classList.add("show"); }
+    else box.classList.remove("show");
+    return true;
+  }
+  function text(){
+    var ps = filled().map(row);
+    var out = ["*Equipe da loja Av. Maringá*", "_" + ps.length + (ps.length===1?" pessoa":" pessoas") + ", preenchido em " + new Date().toLocaleDateString("pt-BR") + "_", ""];
+    ps.forEach(function(r, i){
+      out.push("*" + (i+1) + ". " + (r.nome || "Sem nome") + "*");
+      if (r.cargo) out.push("Cargo: " + r.cargo);
+      var j = [];
+      if (r.entrada || r.saida) j.push((r.entrada||"?") + " às " + (r.saida||"?"));
+      if (r.intervalo) j.push("intervalo " + r.intervalo);
+      if (j.length) out.push("Seg a sex: " + j.join(", "));
+      if (r.sabado) out.push("Sábado: " + r.sabado);
+      if (r.carga) out.push("Carga semanal: " + r.carga + " h");
+      if (r.salario) out.push("Salário: R$ " + r.salario.replace(/^R\$\s*/i,""));
+      if (r.chefe) out.push("Responde a: " + r.chefe);
+      if (r.folga) out.push("Folga: " + r.folga);
+      if (r.contrato) out.push("Contrato: " + r.contrato);
+      if (r.admissao) out.push("Na loja desde: " + r.admissao);
+      if (r.variavel) out.push("Comissão/variável: " + r.variavel);
+      if (r.abre) out.push("Abre/fecha: " + r.abre);
+      if (r.obs) out.push("Obs.: " + r.obs);
+      out.push("");
+    });
+    return out.join("\n").trim();
+  }
+
+  $("btnWa").addEventListener("click", function(){
+    if (!checkMissing()) return;
+    var t = text();
+    var url = "https://wa.me/?text=" + encodeURIComponent(t);
+    if (url.length > 7000){ toast("Texto grande demais para o WhatsApp: baixe a planilha e anexe"); return; }
+    window.open(url, "_blank");
+  });
+  $("btnCopy").addEventListener("click", function(){
+    if (!checkMissing()) return;
+    var t = text();
+    function fallback(){ var a=document.createElement("textarea"); a.value=t; a.setAttribute("readonly",""); a.style.position="fixed"; a.style.opacity="0"; document.body.appendChild(a); a.select(); try{document.execCommand("copy"); toast("Texto copiado. Cole no WhatsApp do Rafael");}catch(e){toast("Não deu para copiar");} a.remove(); }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(function(){ toast("Texto copiado. Cole no WhatsApp do Rafael"); }, fallback);
+    else fallback();
+  });
+
+  var XLSX_URL = "xlsx.mini.min.js";
+  function withXlsx(cb){
+    if (window.XLSX) return cb();
+    var s = document.createElement("script"); s.src = XLSX_URL;
+    s.onload = cb; s.onerror = function(){ toast("Não deu para montar a planilha agora. Use “Copiar texto”"); };
+    document.head.appendChild(s);
+  }
+  $("btnXlsx").addEventListener("click", function(){
+    if (!checkMissing()) return;
+    withXlsx(function(){
+      var data = [COLS.map(function(c){return c[1];})].concat(filled().map(row).map(function(r){ return COLS.map(function(c){ return r[c[0]] || ""; }); }));
+      var ws = XLSX.utils.aoa_to_sheet(data);
+      ws["!cols"] = COLS.map(function(c){ return {wch: Math.max(12, c[1].length + 2)}; });
+      var wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, "Equipe");
+      var name = "Equipe-Av-Maringa-" + new Date().toISOString().slice(0,10) + ".xlsx";
+      var out = XLSX.write(wb, {bookType:"xlsx", type:"array"});
+      var file = new Blob([out], {type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+      try {
+        var fobj = new File([file], name, {type:file.type});
+        if (navigator.canShare && navigator.canShare({files:[fobj]}) && /Android|iPhone|iPad/i.test(navigator.userAgent)){
+          navigator.share({files:[fobj], title:"Equipe Av. Maringá"}).catch(function(){ download(file, name); });
+          return;
+        }
+      } catch(e){}
+      download(file, name);
+    });
+  });
+  function download(blob, name){
+    var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    toast("Planilha baixada. Anexe no WhatsApp do Rafael");
+  }
+
+  // ---------- Abrir planilha preenchida ----------
+  $("btnOpenSheet").addEventListener("click", function(){ $("fileSheet").click(); });
+  $("fileSheet").addEventListener("change", function(e){
+    var file = e.target.files[0]; if (!file) return;
+    withXlsx(function(){
+      var rd = new FileReader();
+      rd.onload = function(){
+        try {
+          var wb = XLSX.read(new Uint8Array(rd.result), {type:"array", cellDates:false, raw:false});
+          var ws = wb.Sheets["Equipe"] || wb.Sheets[wb.SheetNames[0]];
+          var rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:"", raw:false});
+          var hi = -1;
+          for (var i=0;i<Math.min(rows.length,10);i++){ if (rows[i].some(function(c){ return /^nome$/i.test(String(c).trim()); })) { hi = i; break; } }
+          if (hi < 0){ toast("Não reconheci as colunas. Mande a planilha direto pelo WhatsApp"); return; }
+          var head = rows[hi].map(function(c){ return norm(c); });
+          var map = {};
+          COLS.forEach(function(c){ var ix = head.indexOf(norm(c[1])); if (ix > -1) map[c[0]] = ix; });
+          var people = [];
+          rows.slice(hi+1).forEach(function(r){
+            var g = function(k){ return map[k] != null ? String(r[map[k]]||"").trim() : ""; };
+            if (!g("nome") && !g("cargo")) return;
+            if (/^ex(emplo)?[:.]/i.test(g("nome")) || /^preparado por/i.test(g("nome"))) return;
+            var p = blank();
+            ["nome","cargo","intervalo","sabado","carga","salario","chefe","admissao","obs"].forEach(function(k){ p[k] = g(k); });
+            p.entrada = toTime(g("entrada")); p.saida = toTime(g("saida"));
+            p.folga = g("folga").split(/[,;\/ ]+/).map(function(d){ return pick(DAYS, d); }).filter(Boolean);
+            p.contrato = pick(CONTRATOS, g("contrato")) || (g("contrato") ? "Outro" : "");
+            if (g("contrato") && p.contrato === "Outro") p.obs = (p.obs ? p.obs + " · " : "") + "Contrato: " + g("contrato");
+            var v = g("variavel");
+            if (/^s/i.test(v)){ p.variavel = "Sim"; p.variavelQual = v.replace(/^sim[:\s-]*/i,""); } else if (/^n/i.test(v)) p.variavel = "Não";
+            p.abre = pick(ABRE, g("abre"));
+            people.push(p);
+          });
+          if (!people.length){ toast("A planilha está vazia"); return; }
+          var hasData = filled().length;
+          state.people = hasData ? filled().concat(people) : people;
+          openId = null; save(); render();
+          toast(people.length + (people.length===1?" pessoa carregada":" pessoas carregadas") + ". Confira as fichas");
+          $("equipe").scrollIntoView({behavior:"smooth"});
+        } catch(err){ toast("Não consegui abrir. Mande a planilha direto pelo WhatsApp"); }
+        e.target.value = "";
+      };
+      rd.readAsArrayBuffer(file);
+    });
+  });
+  function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]/g,""); }
+  function pick(opts, v){ var n = norm(v); if (!n) return ""; for (var i=0;i<opts.length;i++){ if (norm(opts[i]) === n || norm(opts[i]).indexOf(n) === 0) return opts[i]; } return ""; }
+  function toTime(v){
+    v = String(v).trim(); if (!v) return "";
+    var num = parseFloat(v.replace(",", "."));
+    if (/^0?[.,]\d+$/.test(v) && num < 1){ var m = Math.round(num*1440); return pad(Math.floor(m/60)) + ":" + pad(m%60); }
+    var m2 = v.match(/^(\d{1,2})\s*[:hH]\s*(\d{0,2})/); if (m2) return pad(+m2[1]) + ":" + pad(+(m2[2]||0));
+    var m3 = v.match(/^(\d{1,2})$/); if (m3) return pad(+m3[1]) + ":00";
+    return "";
+  }
+  function pad(n){ return (n<10?"0":"") + n; }
+
+  // ---------- Apagar tudo ----------
+  $("btnClear").addEventListener("click", function(){ $("btnClear").classList.add("hidden"); $("clearConfirm").classList.add("show"); });
+  $("clearNo").addEventListener("click", function(){ $("clearConfirm").classList.remove("show"); $("btnClear").classList.remove("hidden"); });
+  $("clearYes").addEventListener("click", function(){
+    state.people = [blank()]; openId = state.people[0].id;
+    try { localStorage.removeItem(KEY); } catch(e){}
+    $("clearConfirm").classList.remove("show"); $("btnClear").classList.remove("hidden");
+    $("missing").classList.remove("show"); render(); toast("Tudo apagado deste aparelho");
+  });
+
+  // datalist de cargos comuns
+  var dlc = document.createElement("datalist"); dlc.id = "dl-cargos";
+  ["Vendedor(a)","Caixa","Repositor(a)","Estoquista","Banho e tosa","Tosador(a)","Banhista","Atendente","Entregador(a)","Auxiliar de limpeza","Veterinário(a)","Recepção","Gerente","Subgerente"].forEach(function(c){ var o=document.createElement("option"); o.value=c; dlc.appendChild(o); });
+  document.body.appendChild(dlc);
+
+  render();
+})();
+</script>
+</body>
+</html>
